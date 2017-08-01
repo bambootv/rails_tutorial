@@ -54,5 +54,43 @@ New app:  heroku create
 Rename:   heroku rename new_name
 Push:     git push heroku master #(master of local to master of heroku)
           git push heroku develop:master #(develop of local to master of heroku)
+```
 
+## Chapter 2:
+
+#### Url
+```
+HTTP Request  Url           Action          Purpose
+
+GET           /users        index           show all users
+POST          /users        create          new users
+GET           /users/1      show            show uses with id 1
+GET           /users/new    new             make new user
+GET           /users/1/edit edit            edit user with id 1
+PATCH         /users/1      update          update user with id 1
+DELETE        /users/1      detele          delete users with id 1
+```
+
+#### MVC
+
+![](https://user-images.githubusercontent.com/18675907/28814626-5843e5a8-766c-11e7-81be-49895750bfa5.png)
+
+#### Association
+```
+$ rails console
+>> first_user = User.first
+=> #<User id: 1, name: "Michael Hartl", email: "michael@example.org",
+created_at: "2016-05-15 02:01:31", updated_at: "2016-05-15 02:01:31">
+>> first_user.microposts
+=> [#<Micropost id: 1, content: "First micropost!", user_id: 1, created_at:
+"2016-05-15 02:37:37", updated_at: "2016-05-15 02:37:37">, #<Micropost id: 2,
+content: "Second micropost", user_id: 1, created_at: "2016-05-15 02:38:54",
+updated_at: "2016-05-15 02:38:54">]
+>> micropost = first_user.microposts.first    # Micropost.first would also work.
+=> #<Micropost id: 1, content: "First micropost!", user_id: 1, created_at:
+"2016-05-15 02:37:37", updated_at: "2016-05-15 02:37:37">
+>> micropost.user
+=> #<User id: 1, name: "Michael Hartl", email: "michael@example.org",
+created_at: "2016-05-15 02:01:31", updated_at: "2016-05-15 02:01:31">
+>> exit
 ```
