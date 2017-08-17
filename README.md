@@ -77,20 +77,27 @@ DELETE        /users/1      detele          delete users with id 1
 
 #### Association
 ```
-$ rails console
 >> first_user = User.first
 => #<User id: 1, name: "Michael Hartl", email: "michael@example.org",
 created_at: "2016-05-15 02:01:31", updated_at: "2016-05-15 02:01:31">
+
 >> first_user.microposts
 => [#<Micropost id: 1, content: "First micropost!", user_id: 1, created_at:
 "2016-05-15 02:37:37", updated_at: "2016-05-15 02:37:37">, #<Micropost id: 2,
 content: "Second micropost", user_id: 1, created_at: "2016-05-15 02:38:54",
 updated_at: "2016-05-15 02:38:54">]
+
 >> micropost = first_user.microposts.first    # Micropost.first would also work.
 => #<Micropost id: 1, content: "First micropost!", user_id: 1, created_at:
 "2016-05-15 02:37:37", updated_at: "2016-05-15 02:37:37">
+
 >> micropost.user
 => #<User id: 1, name: "Michael Hartl", email: "michael@example.org",
 created_at: "2016-05-15 02:01:31", updated_at: "2016-05-15 02:01:31">
 >> exit
 ```
+
+##### OOP
+![](https://user-images.githubusercontent.com/18675907/29394988-212c174c-8338-11e7-9854-52b9cd956d07.png)
+
+![](https://user-images.githubusercontent.com/18675907/29394994-258b8c78-8338-11e7-82c8-371dc4571c2f.png)
