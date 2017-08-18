@@ -101,3 +101,38 @@ created_at: "2016-05-15 02:01:31", updated_at: "2016-05-15 02:01:31">
 ![](https://user-images.githubusercontent.com/18675907/29394988-212c174c-8338-11e7-9854-52b9cd956d07.png)
 
 ![](https://user-images.githubusercontent.com/18675907/29394994-258b8c78-8338-11e7-82c8-371dc4571c2f.png)
+
+
+## Chapter 3:
+
+#### Generate controller and model
+
+```
+rails generate controller StaticPages home help
+
+rails destroy controller StaticPages home help
+
+rails db:migrate
+
+rails db:rollback
+
+rails db:migrate VERSION=0
+
+rails s -b $IP -p $PORT
+```
+
+```
+The hypertext transfer protocol (HTTP) defines the basic operations GET, POST, PATCH, and DELETE. These refer to operations between a client computer (typically running a web browser such as Chrome, Firefox, or Safari) and a server (typically running a webserver such as Apache or Nginx). (It’s important to understand that, when developing Rails applications on a local computer, the client and server are the same physical machine, but in general they are different.) An emphasis on HTTP verbs is typical of web frameworks (including Rails) influenced by the REST architecture, which we saw briefly in Chapter 2 and will start learning more about in Chapter 7.
+
+GET is the most common HTTP operation, used for reading data on the web; it just means “get a page”, and every time you visit a site like http://www.google.com/ or http://www.wikipedia.org/ your browser is submitting a GET request. POST is the next most common operation; it is the request sent by your browser when you submit a form. In Rails applications, POST requests are typically used for creating things (although HTTP also allows POST to perform updates). For example, the POST request sent when you submit a registration form creates a new user on the remote site. The other two verbs, PATCH and DELETE, are designed for updating and destroying things on the remote server. These requests are less common than GET and POST since browsers are incapable of sending them natively, but some web frameworks (including Ruby on Rails) have clever ways of making it seem like browsers are issuing such requests. As a result, Rails supports all four of the request types GET, POST, PATCH, and DELETE.
+```
+
+```
+  html.reb: Embedded Ruby: Nhúng ruby vào html
+
+  (The distinction between the two types of embedded Ruby is that <% ... %> executes the code inside, while
+  <%= ... %> executes it and inserts the result into the template.) The resulting page is exactly the same as before, only now the variable part of the title is generated dynamically by ERb.
+
+  This code arranges to include the application stylesheet and JavaScript, which are part of the asset pipeline (Section 5.2.1), together with the Rails method csrf_meta_tags, which prevents cross-site request forgery (CSRF), a type of malicious web attack.
+
+```
