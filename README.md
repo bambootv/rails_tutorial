@@ -136,3 +136,18 @@ GET is the most common HTTP operation, used for reading data on the web; it just
   This code arranges to include the application stylesheet and JavaScript, which are part of the asset pipeline (Section 5.2.1), together with the Rails method csrf_meta_tags, which prevents cross-site request forgery (CSRF), a type of malicious web attack.
 
 ```
+
+## Chapter 4
+
+#### Load css & js
+```
+<%= stylesheet_link_tag 'application', media: 'all',
+                                      'data-turbolinks-track': 'reload' %>
+```
+
+This uses the built-in Rails function stylesheet_link_tag (which you can read more about at the [Rails API](http://api.rubyonrails.org/classes/ActionView/Helpers/AssetTagHelper.html#method-i-stylesheet_link_tag)) to include application.css for all [media types](https://www.w3.org/TR/CSS2/media.html) (including computer screens and printers). To an experienced Rails developer, this line looks simple, but there are at least four potentially confusing Ruby ideas: built-in Rails methods, method invocation with missing parentheses, symbols, and hashes. We’ll cover all of these ideas in this chapter.
+
+![](https://user-images.githubusercontent.com/18675907/29450135-a3857b62-8427-11e7-9699-a0b3da4a09d5.png)
+
+
+![](https://user-images.githubusercontent.com/18675907/29450293-59d930e8-8428-11e7-8b51-2ab7ca291af5.png)
