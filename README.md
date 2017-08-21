@@ -151,3 +151,54 @@ This uses the built-in Rails function stylesheet_link_tag (which you can read mo
 
 
 ![](https://user-images.githubusercontent.com/18675907/29450293-59d930e8-8428-11e7-8b51-2ab7ca291af5.png)
+
+
+## Chapter 5
+
+#### Sass & css
+
+Sas has many form of expression, ex: scss
+
+Css -> Sass
+
+```
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+==>
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+```
+
+```
+#logo {
+  float: left;
+  margin-right: 10px;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+==>
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+```
